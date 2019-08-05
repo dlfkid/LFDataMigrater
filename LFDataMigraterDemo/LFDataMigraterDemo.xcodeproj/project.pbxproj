@@ -13,6 +13,8 @@
 		351A728922F1964C0021385F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 351A728722F1964C0021385F /* LaunchScreen.storyboard */; };
 		351A728C22F1964C0021385F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 351A728B22F1964C0021385F /* main.m */; };
 		351A729422F197B90021385F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 351A729322F197B90021385F /* MainViewController.m */; };
+		3554588222F7BAEB00EB557B /* LFDataInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3554588122F7BAEB00EB557B /* LFDataInfo.m */; };
+		3554588622F7BD5E00EB557B /* LFDataMigrater.m in Sources */ = {isa = PBXBuildFile; fileRef = 3554588522F7BD5E00EB557B /* LFDataMigrater.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,10 @@
 		351A728B22F1964C0021385F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		351A729222F197B90021385F /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		351A729322F197B90021385F /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		3554588022F7BAEB00EB557B /* LFDataInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFDataInfo.h; sourceTree = "<group>"; };
+		3554588122F7BAEB00EB557B /* LFDataInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFDataInfo.m; sourceTree = "<group>"; };
+		3554588422F7BD5E00EB557B /* LFDataMigrater.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFDataMigrater.h; sourceTree = "<group>"; };
+		3554588522F7BD5E00EB557B /* LFDataMigrater.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFDataMigrater.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,12 +71,24 @@
 				351A727D22F1964A0021385F /* SceneDelegate.m */,
 				351A729222F197B90021385F /* MainViewController.h */,
 				351A729322F197B90021385F /* MainViewController.m */,
+				3554588322F7BAF300EB557B /* LFDataMirgater */,
 				351A728522F1964C0021385F /* Assets.xcassets */,
 				351A728722F1964C0021385F /* LaunchScreen.storyboard */,
 				351A728A22F1964C0021385F /* Info.plist */,
 				351A728B22F1964C0021385F /* main.m */,
 			);
 			path = LFDataMigraterDemo;
+			sourceTree = "<group>";
+		};
+		3554588322F7BAF300EB557B /* LFDataMirgater */ = {
+			isa = PBXGroup;
+			children = (
+				3554588022F7BAEB00EB557B /* LFDataInfo.h */,
+				3554588122F7BAEB00EB557B /* LFDataInfo.m */,
+				3554588422F7BD5E00EB557B /* LFDataMigrater.h */,
+				3554588522F7BD5E00EB557B /* LFDataMigrater.m */,
+			);
+			path = LFDataMirgater;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +162,8 @@
 			files = (
 				351A727B22F1964A0021385F /* AppDelegate.m in Sources */,
 				351A728C22F1964C0021385F /* main.m in Sources */,
+				3554588622F7BD5E00EB557B /* LFDataMigrater.m in Sources */,
+				3554588222F7BAEB00EB557B /* LFDataInfo.m in Sources */,
 				351A727E22F1964A0021385F /* SceneDelegate.m in Sources */,
 				351A729422F197B90021385F /* MainViewController.m in Sources */,
 			);
