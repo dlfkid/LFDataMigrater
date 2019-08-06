@@ -12,11 +12,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LFDataInfo : NSObject
 
-@property (nonatomic, copy, readonly) NSString *dataBaseName;
-@property (nonatomic, copy, readonly) NSString *version;
-@property (nonatomic, strong, readonly) NSDate *lastUpdate;
-@property (nonatomic, copy, readonly) NSString *lastUpdateString;
+@property (nonatomic, copy) NSString *dataBaseName;
+@property (nonatomic, copy) NSNumber *version;
+@property (nonatomic, strong) NSDate *lastUpdate;
+@property (nonatomic, copy) NSString *lastUpdateString;
+@property (nonatomic, copy) NSString *dataBaseFilePath;
 
++ (instancetype)lf_loadDataInfoFromArchiveWithDataBaseName:(NSString *)dataBaseName Error:(NSError **)error;
+
+- (void)lf_savedToArchiveWithError:(NSError **)error;
 
 @end
 

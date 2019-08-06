@@ -10,31 +10,32 @@
 
 @interface LFDataInfo() <NSSecureCoding>
 
-@property (nonatomic, copy) NSString *dataBaseName;
-@property (nonatomic, copy) NSString *version;
-@property (nonatomic, strong) NSDate *lastUpdate;
-@property (nonatomic, copy) NSString *lastUpdateString;
-
 @end
 
 @implementation LFDataInfo
 
 #pragma mark - Public
 
-+ (instancetype)infoWithDataBaseNanme:(NSString *)dataBaseName Error:(NSError **)error {
-    NSData *encryptData = [NSKeyedUnarchiver unarchiveObjectWithFile:[self archivePathWithDataBaseName:dataBaseName]];
+- (void)lf_savedToArchiveWithError:(NSError *__autoreleasing  _Nullable *)error {
     if (@available(iOS 11.0, *)) {
-        LFDataInfo *dataBaseInfo = [NSKeyedUnarchiver unarchivedObjectOfClass:[LFDataInfo class] fromData:encryptData error:error];
-        if (error) {
-            return nil;
-        } else {
-            return dataBaseInfo;
-        }
+        NSData *encrpytData = [NSKeyedArchiver archivedDataWithRootObject:self requiringSecureCoding:YES error:error];
+        [NSKeyedArchiver archiveRootObject:encrpytData toFile:[self archivePath]];
+    } else {
+        NSData *encrpytData = [NSKeyedArchiver archivedDataWithRootObject:self];
+        [NSKeyedArchiver archiveRootObject:encrpytData toFile:[self archivePath]];
+    }
+}
+
++ (instancetype)lf_loadDataInfoFromArchiveWithDataBaseName:(NSString *)dataBaseName Error:(NSError *__autoreleasing  _Nullable *)error {
+    NSData *encryptData = [NSKeyedUnarchiver unarchiveObjectWithFile:[self archivePathWithDataBaseName:dataBaseName]];
+    LFDataInfo *dataBaseInfo = nil;
+    if (@available(iOS 11.0, *)) {
+        dataBaseInfo = [NSKeyedUnarchiver unarchivedObjectOfClass:[LFDataInfo class] fromData:encryptData error:error];
     } else {
         // Fallback on earlier versions
-        LFDataInfo *dataBaseInfo = [NSKeyedUnarchiver unarchiveObjectWithData:encryptData];
-        return dataBaseInfo;
+        dataBaseInfo = [NSKeyedUnarchiver unarchiveObjectWithData:encryptData];
     }
+    return dataBaseInfo;
 }
 
 #pragma mark - Private
