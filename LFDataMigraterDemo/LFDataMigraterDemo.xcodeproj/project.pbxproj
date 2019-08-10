@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		350972A022F9673E00ECDFBC /* NSError+LFDataMigrater.m in Sources */ = {isa = PBXBuildFile; fileRef = 3509729F22F9673E00ECDFBC /* NSError+LFDataMigrater.m */; };
 		351A727B22F1964A0021385F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 351A727A22F1964A0021385F /* AppDelegate.m */; };
-		351A727E22F1964A0021385F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 351A727D22F1964A0021385F /* SceneDelegate.m */; };
 		351A728622F1964C0021385F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 351A728522F1964C0021385F /* Assets.xcassets */; };
 		351A728922F1964C0021385F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 351A728722F1964C0021385F /* LaunchScreen.storyboard */; };
 		351A728C22F1964C0021385F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 351A728B22F1964C0021385F /* main.m */; };
 		351A729422F197B90021385F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 351A729322F197B90021385F /* MainViewController.m */; };
 		3554588222F7BAEB00EB557B /* LFDataInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3554588122F7BAEB00EB557B /* LFDataInfo.m */; };
 		3554588622F7BD5E00EB557B /* LFDataMigrater.m in Sources */ = {isa = PBXBuildFile; fileRef = 3554588522F7BD5E00EB557B /* LFDataMigrater.m */; };
+		359796EC22FE726B0073A2FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 359796EA22FE726B0073A2FD /* Main.storyboard */; };
+		3597971422FE75CE0073A2FD /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3597971222FE75CE0073A2FD /* SceneDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +25,6 @@
 		351A727622F1964A0021385F /* LFDataMigraterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LFDataMigraterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		351A727922F1964A0021385F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		351A727A22F1964A0021385F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		351A727C22F1964A0021385F /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		351A727D22F1964A0021385F /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		351A728522F1964C0021385F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		351A728822F1964C0021385F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		351A728A22F1964C0021385F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,6 +35,9 @@
 		3554588122F7BAEB00EB557B /* LFDataInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFDataInfo.m; sourceTree = "<group>"; };
 		3554588422F7BD5E00EB557B /* LFDataMigrater.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFDataMigrater.h; sourceTree = "<group>"; };
 		3554588522F7BD5E00EB557B /* LFDataMigrater.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFDataMigrater.m; sourceTree = "<group>"; };
+		359796EB22FE726B0073A2FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3597971222FE75CE0073A2FD /* SceneDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		3597971322FE75CE0073A2FD /* SceneDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,13 +72,14 @@
 			children = (
 				351A727922F1964A0021385F /* AppDelegate.h */,
 				351A727A22F1964A0021385F /* AppDelegate.m */,
-				351A727C22F1964A0021385F /* SceneDelegate.h */,
-				351A727D22F1964A0021385F /* SceneDelegate.m */,
 				351A729222F197B90021385F /* MainViewController.h */,
 				351A729322F197B90021385F /* MainViewController.m */,
+				3597971322FE75CE0073A2FD /* SceneDelegate.h */,
+				3597971222FE75CE0073A2FD /* SceneDelegate.m */,
 				3554588322F7BAF300EB557B /* LFDataMirgater */,
 				351A728522F1964C0021385F /* Assets.xcassets */,
 				351A728722F1964C0021385F /* LaunchScreen.storyboard */,
+				359796EA22FE726B0073A2FD /* Main.storyboard */,
 				351A728A22F1964C0021385F /* Info.plist */,
 				351A728B22F1964C0021385F /* main.m */,
 			);
@@ -153,6 +156,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				359796EC22FE726B0073A2FD /* Main.storyboard in Resources */,
 				351A728922F1964C0021385F /* LaunchScreen.storyboard in Resources */,
 				351A728622F1964C0021385F /* Assets.xcassets in Resources */,
 			);
@@ -168,8 +172,8 @@
 				351A727B22F1964A0021385F /* AppDelegate.m in Sources */,
 				351A728C22F1964C0021385F /* main.m in Sources */,
 				3554588622F7BD5E00EB557B /* LFDataMigrater.m in Sources */,
+				3597971422FE75CE0073A2FD /* SceneDelegate.m in Sources */,
 				3554588222F7BAEB00EB557B /* LFDataInfo.m in Sources */,
-				351A727E22F1964A0021385F /* SceneDelegate.m in Sources */,
 				351A729422F197B90021385F /* MainViewController.m in Sources */,
 				350972A022F9673E00ECDFBC /* NSError+LFDataMigrater.m in Sources */,
 			);
@@ -184,6 +188,14 @@
 				351A728822F1964C0021385F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		359796EA22FE726B0073A2FD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				359796EB22FE726B0073A2FD /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
