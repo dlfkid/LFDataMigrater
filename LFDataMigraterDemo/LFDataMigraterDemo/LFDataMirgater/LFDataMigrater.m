@@ -28,17 +28,10 @@
             _dbInfo = lfdataInfo;
         } else {
             _dbInfo = [[LFDataInfo alloc] init];
-            _dbInfo.version = version;
+            _dbInfo.version = @0;
             _dbInfo.dataBaseFilePath = dataBasePath;
             _dbInfo.lastUpdate = [[NSDate alloc] init];
             _dbInfo.lastUpdateString = [self.dateFormatter stringFromDate:_dbInfo.lastUpdate];
-            [self lf_migrateDataBaseToHigherVersion:version Completion:^(NSError * _Nullable error) {
-                if (!error) {
-                    NSLog(@"Data base migrated to : %ld", version.integerValue);
-                } else {
-                    NSLog(@"Data base migrate failed with error: %@", error.localizedDescription);
-                }
-            }];
         }
     }
     return self;
@@ -65,7 +58,7 @@
             [self.delegate lf_initDatabaseWithInfo:self.dbInfo];
             // 创建数据库成功，重置版本号, 执行数据库升级
             self.dbInfo.version = @(0);
-            for (int i = self.dbInfo.version.intValue; i < dataBaseVersion.intValue; i ++) {
+            for (int i = self.dbInfo.version.intValue; i <= dataBaseVersion.intValue; i ++) {
                 if ([self.delegate respondsToSelector:@selector(lf_updateDataBaseWithVersion:)]) {
                     [self.delegate lf_updateDataBaseWithVersion:@(i)];
                 } else {
@@ -85,7 +78,7 @@
             return;
         }
     } else {
-        for (int i = self.dbInfo.version.intValue; i < dataBaseVersion.intValue; i ++) {
+        for (int i = self.dbInfo.version.intValue; i <= dataBaseVersion.intValue; i ++) {
             if ([self.delegate respondsToSelector:@selector(lf_updateDataBaseWithVersion:)]) {
                 [self.delegate lf_updateDataBaseWithVersion:@(i)];
             } else {
@@ -130,7 +123,7 @@
         [self.delegate lf_initDatabaseWithInfo:self.dbInfo];
         // 创建数据库成功，重置版本号, 执行数据库升级
         self.dbInfo.version = @(0);
-        for (int i = self.dbInfo.version.intValue; i < dataBaseVersion.intValue; i ++) {
+        for (int i = self.dbInfo.version.intValue; i <= dataBaseVersion.intValue; i ++) {
             if ([self.delegate respondsToSelector:@selector(lf_updateDataBaseWithVersion:)]) {
                 [self.delegate lf_updateDataBaseWithVersion:@(i)];
             } else {
