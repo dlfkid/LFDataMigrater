@@ -6,9 +6,10 @@
 //  Copyright © 2019 LeonDeng. All rights reserved.
 //
 
-@class LFDataInfo;
-
 #import <Foundation/Foundation.h>
+
+#import "LFDataInfo.h"
+#import "NSError+LFDataMigrater.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -33,8 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// Initialize migrater
 /// @param dataBaseName dataBasename
 /// @param dataBasePath dataBasePath
-/// @param version dataBaseVersion
-- (instancetype)initWithDataBaseName:(NSString *)dataBaseName Path:(NSString *)dataBasePath toVersion:(NSNumber *)version;
+- (instancetype)initWithDataBaseName:(NSString *)dataBaseName Path:(NSString *)dataBasePath;
 
 /// Migrate your database to heigher version
 /// @param dataBaseVersion target version

@@ -7,9 +7,6 @@
 //
 
 #import "LFDataMigrater.h"
-// Models
-#import "LFDataInfo.h"
-#import "NSError+LFDataMigrater.h"
 
 @interface LFDataMigrater()
 
@@ -20,7 +17,7 @@
 
 @implementation LFDataMigrater
 
-- (instancetype)initWithDataBaseName:(NSString *)dataBaseName Path:(NSString *)dataBasePath toVersion:(NSNumber *)version {
+- (instancetype)initWithDataBaseName:(NSString *)dataBaseName Path:(NSString *)dataBasePath {
     if ([super init]) {
         NSError *archiveError = nil;
         LFDataInfo *lfdataInfo = [LFDataInfo lf_loadDataInfoFromArchiveWithDataBaseName:dataBaseName Error:&archiveError];
